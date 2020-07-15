@@ -31,4 +31,9 @@ def download():
         root.update()
         link.set("Enter correct link")
 
-
+# created the Label widget to welcome user
+Label(root, text="Welcome to youtube\nDownloader Application", font="Consolas 15 bold").pack()
+# declaring StringVar type variable
+myVar = StringVar()
+# setting the default text to myVar
+myVar.set("Enter the link below")
