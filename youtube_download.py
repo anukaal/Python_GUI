@@ -2,7 +2,7 @@
 # importing tkinter
 from tkinter import *
 # importing Youtube module
-from pytube import Youtube
+from pytube import YouTube
 
 # initializing tkinter
 root = Tk()
