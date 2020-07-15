@@ -37,3 +37,13 @@ Label(root, text="Welcome to youtube\nDownloader Application", font="Consolas 15
 myVar = StringVar()
 # setting the default text to myVar
 myVar.set("Enter the link below")
+# created the Entry widget to ask user to enter the url
+Entry(root, textvariable=myVar, width=40).pack(pady=10)
+# declaring StringVar type variable
+link = StringVar()
+# created the Entry widget to get the link
+Entry(root, textvariable=link, width=40).pack(pady=10)
+# created and called the download function to download video
+Button(root, text="Download video", command=download).pack()
+# running the mainloop
+root.mainloop()
