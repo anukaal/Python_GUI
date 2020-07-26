@@ -53,3 +53,13 @@ def showdata():
             # updating the root
             root.update()
         # for loop to get one country data stored as dict in list cases
+        for y in cases:
+            # storing every Country's confirmed cases in the confirmed list
+            confirmed.append(y["confirmed"])
+            # storing every Country's active cases in the active list
+            active.append(y["active"])
+            # storing every Country's deaths cases in the deaths list
+            deaths.append(y["deaths"])
+            # storing every Country's recovered cases in the recovered list
+            recovered.append(y["recovered"])
+        # marking the color information on scaleusing patches
