@@ -63,3 +63,8 @@ def showdata():
             # storing every Country's recovered cases in the recovered list
             recovered.append(y["recovered"])
         # marking the color information on scaleusing patches
+        confirmed_patch = mpatches.Patch(color='green', label='confirmed')
+        recovered_patch = mpatches.Patch(color='red', label='recovered')
+        active_patch = mpatches.Patch(color='blue', label='active')
+        deaths_patch = mpatches.Patch(color='black', label='deaths')
+        # plotting the scale on graph using legend()
