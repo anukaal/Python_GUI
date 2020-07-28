@@ -68,3 +68,11 @@ def showdata():
         active_patch = mpatches.Patch(color='blue', label='active')
         deaths_patch = mpatches.Patch(color='black', label='deaths')
         # plotting the scale on graph using legend()
+        plt.legend(handles=[confirmed_patch, recovered_patch, active_patch, deaths_patch])
+        # showing the data using graphs
+        # this whole for loop section is related to matplotlib
+        for x in range(len(country_names)):
+            plt.bar(country_names[x], confirmed[x], color='green')
+            if recovered[x] > active[x]:
+                plt.bar(country_names[x], recovered[x], color='red')
+                plt.bar(country_names[x], active[x], color='blue')
