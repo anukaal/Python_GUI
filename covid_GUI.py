@@ -83,3 +83,25 @@ def showdata():
             plt.bar(country_names[x], deaths[x], color='black')
         # setting the title of the graph
         plt.title('Current Covid Cases')
+        # giving label to x direction of graph
+        plt.xlabel('Country Name')
+        # giving label to y direction of graph
+        plt.ylabel('Cases(in millions)')
+        # showing the full graph
+        plt.show()
+    except Exception as e:
+        # asking user to enter correct details
+        # during entering the country names on GUI
+        # please differentiate the country names
+        # with spaces or comma but not with both
+        # otherwise you will come to this section
+        data.set("Enter correct details again")
+
+
+Label(root, text="Enter all countries names\nfor whom you want to get\ncovid-19 data", font="Consolas 15 bold").pack()
+Label(root, text="Enter country name:").pack()
+data = StringVar()
+data.set("Seperate country names using comma or space(not both)")
+entry = Entry(root, textvariable=data, width=50).pack()
+Button(root, text="Get Data", command=showdata).pack()
+root.mainloop()
