@@ -9,7 +9,7 @@ root = Tk()
 
 # setting the geometry of the GUI
 
-root.geometry("400*350")
+root.geometry("300*350")
 
 # setting the title of the GUI
 
