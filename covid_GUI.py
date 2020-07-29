@@ -76,3 +76,10 @@ def showdata():
             if recovered[x] > active[x]:
                 plt.bar(country_names[x], recovered[x], color='red')
                 plt.bar(country_names[x], active[x], color='blue')
+
+            else:
+                plt.bar(country_names[x], active[x], color='blue')
+                plt.bar(country_names[x], recovered[x], color='red')
+            plt.bar(country_names[x], deaths[x], color='black')
+        # setting the title of the graph
+        plt.title('Current Covid Cases')
